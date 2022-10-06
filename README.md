@@ -2,6 +2,6 @@
 Sample Test
 1st Commit - Nelson
 
-2st Commit - Sebastian
+2nd Commit - Sebastian
 
-3ST Commit - Maria
+3rd Commit - Maria

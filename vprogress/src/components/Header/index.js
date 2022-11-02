@@ -1,11 +1,12 @@
 import React, {useContext} from 'react'
 import { Link } from "react-router-dom";
 // Imagen Logo header
-import logo1 from "../../img/logo1.jpg";
+import Funk from "../../img/Funk.png";
 // Boton Carrito
-import duende from "../../img/duende.png";
+import  nube  from "../../img/Nube.png";
 //Datos
 import { DataContext } from "../../context/Dataprovider";
+
 
 
 export const Header = () => {
@@ -28,25 +29,33 @@ export const Header = () => {
       <header>
         <Link href="https://www.google.com/">
           <div className="logo">
-            <img src={logo1} alt="logo" width="200" height="60" />
+            <img src={Funk} alt="logo" width="200" />
           </div>
         </Link>
         <ul>
           <li>
-            <Link to="/">INICIO</Link>
+            <Link to="/">
+              <button>Inicio</button>
+            </Link>
           </li>
           <li>
-            <Link to="/productos/">CATALOGO</Link>
+            <Link to="/Productos/">
+              <button>Productos</button>
+            </Link>
           </li>
           <li>
-            <Link to="/SOMOS">SOMOS</Link>
+            <Link to="/Somos">
+              <button>Somos</button>
+            </Link>
           </li>
           <li>
-            <Link to="/CONTACTENOS">CONTACTENOS</Link>
+            <Link to="/Contactenos">
+              <button>Contactenos</button>
+            </Link>
           </li>
           <li>
             <div className="cart" onClick={toogleMenu}>
-              <img src={duende} alt=".cart" />
+              <img src={nube} alt=".nube"/>
               <span className="item__total">{carrito.length}</span>
             </div>
           </li>

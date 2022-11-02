@@ -2,9 +2,8 @@ import React from "react";
 import { Inicio } from "./Inicio";
 import { Route, Routes } from "react-router-dom";
 import { ProductosLista } from "./Productos/index";
-import { ResumenVentas } from "./administrador/ResumenVentas";
-import { ResumenProducto } from "./administrador/ResumenProducto";
-import { EditProducto } from "./administrador/EditProducto";
+import { Somos } from "./Somos";
+import { Contactenos } from "./Contactenos";
 
 export const Paginas = () => {
   return (
@@ -14,10 +13,11 @@ export const Paginas = () => {
         {/* Inicio o home de la pagina */}
         <Route path="/" element={<Inicio />} />
         {/* Catalogo o Productos de la pagiina */}
-        <Route path="/productos/" element={<ProductosLista />} />
-        <Route path="/listventas/" element={<ResumenVentas />} />
-        <Route path="/listproductos/" element={<ResumenProducto />} />
-        <Route path="/editar"  element={<EditProducto />} />
+        <Route path="/Productos/" element={<ProductosLista />} />
+
+        <Route path="/Somos/" element={<Somos />} />
+        
+        <Route path="/Contactenos" element={ <Contactenos/>} />
       </Routes>
     </main>
   );

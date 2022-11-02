@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from "react";
-import  Data  from '../Data.js'
+import  Data   from '../Data.js'
 
 export const DataContext = createContext();
 
@@ -36,7 +36,7 @@ export const DataProvider = (props) => {
         }
     }
 
-    // Se consume los datos del carrito con JSON para identificar cada carrito
+    // Se consume los datos del carrito con JSON para identificar cada producto
     useEffect(() => {
         const dataCarrito = JSON.parse(localStorage.getItem('dataCarrito')
         )

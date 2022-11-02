@@ -2,7 +2,9 @@ import React from "react";
 
 export const ResumenVentas = () => {
     return (
-        <div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <>
+        <div>
+            <div><h1>Resumen de Ventas</h1></div>
             <div className="bd-example">
 
                 <table class="table table-dark table-striped">
@@ -37,5 +39,6 @@ export const ResumenVentas = () => {
                 </table>
             </div>
         </div>
+        </>
     );
 };

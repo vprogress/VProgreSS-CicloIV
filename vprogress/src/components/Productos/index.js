@@ -7,12 +7,15 @@ export const ProductosLista = () => {
   const value = useContext(DataContext)
   const [productos] = value.productos
 
-  console.log(productos)
+
 
   return (
-    <>
+  
+  <>
+  
       <h1 className="Tittle">PRODUCTOS</h1>
       <div className="Productos">
+        
         {productos.map((producto) => (
           <ProductoItem
             key={producto.id}
@@ -24,8 +27,11 @@ export const ProductosLista = () => {
             cantidad={producto.cantidad}
           />
         ))}
+        
       </div>
+      
       {/* Paginacion Ejemplo */}
+      
     </>
   );
 };

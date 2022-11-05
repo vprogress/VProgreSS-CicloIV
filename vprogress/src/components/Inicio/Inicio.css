@@ -1,0 +1,149 @@
+.contenido {
+    flex: content;
+    height: 0;
+    padding: 200px;
+    margin: 0;
+    background-color: #a10684;
+    border-radius: 10px;
+
+}
+
+.contenido h1 {
+    text-align: center;
+    color: #630b57;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.container img {
+    border-radius: 50px;
+}
+
+.contenido h1 {
+    color: #ffea00;
+}
+
+.contenido .Br2 {
+    color: #ff8000;
+}
+
+.p-4 {
+    padding: 1.5rem !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.rounded {
+    border-radius: 0.25rem !important;
+}
+
+.banner2 {
+    width: 100% !important;
+    transition: 0.5s ease-in-out;
+}
+
+aside {
+    display: block;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    font-family: 'system-ui';
+    text-transform: uppercase;
+
+}
+
+
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: space-evenly;
+}
+
+.store .itemback {
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    border: 1px solid #DDDDDD;
+
+
+
+    box-shadow: 2px 5px 9px 1px #80003e;
+    -webkit-box-shadow: 2px 5px 9px 1px #80003e;
+    -moz-box-shadow: 2px 5px 9px 1px #80003e;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.col button {
+
+    display: inline-block;
+    padding: .2rem 1rem;
+    font-size: 1rem;
+    background-color: #bfff00;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+.col button:hover {
+    background-color: #80003d;
+    color: white;
+}
+
+/*-------------INICIO----------------------*/
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .contenido {
+        max-width: 1200px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .contenido .container img {
+        max-width: 700px;
+    }
+}
+
+ @media only screen and (min-width: 1000px) {
+     .container {
+         max-width: 900px;
+     }
+ }
+
+ @media only screen and (min-width: 1200px) {
+     .contenido {
+         max-width: 1200px;
+     }
+ }
+
+ @media only screen and (min-width: 1200px) {
+     .contenido .container img {
+         max-width: 700px;
+     }
+ }

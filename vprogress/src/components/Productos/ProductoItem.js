@@ -1,5 +1,7 @@
 import React, { useContext} from "react";
-import  {DataContext}  from "../../context/Dataprovider";
+import { DataContext } from "../../context/Dataprovider";
+
+import "./Productos.css";
 
 export const ProductoItem = ({ id, title, price, image, category }) => {
   //Funcion

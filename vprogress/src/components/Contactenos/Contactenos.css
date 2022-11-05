@@ -1,0 +1,78 @@
+ #general_section {
+     display: flex;
+     padding: 0%;
+     padding-bottom: 5em;
+
+ }
+
+ .formulario {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     flex-grow: 4;
+     flex-basis: 0;
+     padding: 1 1em;
+ }
+
+ .nosotros {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     flex-grow: 8;
+     flex-basis: 0;
+     padding: 0 1em;
+     justify-content: center;
+     text-align: center;
+     margin-right: 2em;
+     ;
+
+ }
+
+ .nosotros h1 {
+
+     height: 1em;
+     padding: 1em 0.3em;
+
+     font-family: Cooper Black;
+     margin-bottom: 1em;
+
+ }
+
+ .texto_nosotros {
+     flex-grow: 50;
+     flex-basis: 0;
+     font-size: 1.1em;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     padding: 1em 3em;
+     text-align: justify;
+ }
+
+
+
+ .hidding {
+     margin: 0;
+     padding: 0;
+     background-color: #61e4ff;
+
+ }
+
+ #aviso_nombre,
+ #aviso_correo,
+ #aviso_tema,
+ #aviso_mensaje {
+     display: none;
+     text-align: center;
+     font-size: 1.6em;
+     color: white;
+     border-radius: 0 0 5px 5px;
+
+
+ }
+
+ #alerta {
+     display: none;
+     background-color: red;
+     color: white;
+
+ }
+

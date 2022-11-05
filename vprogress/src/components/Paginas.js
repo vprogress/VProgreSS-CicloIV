@@ -1,9 +1,9 @@
 import React from "react";
-import { Inicio } from "./Inicio";
+import { Inicio } from "./Inicio/Inicio";
 import { Route, Routes } from "react-router-dom";
-import { ProductosLista } from "./Productos/index";
-import { Somos } from "./Somos";
-import { Contactenos } from "./Contactenos";
+import { ProductosLista } from "./Productos/Productos";
+import { Somos } from "./Somos/Somos";
+import { Contactenos } from "./Contactenos/Contactenos";
 //Administrador
 import { ResumenVentas } from "./administrador/ResumenVentas";
 import { ResumenProducto } from "./administrador/ResumenProducto";

@@ -14,6 +14,7 @@ header {
     background-position-y: center;
     box-shadow: 0 5px 10px #080808;
     border-radius: 5px;
+    
 }
 
 
@@ -79,7 +80,7 @@ header .cart img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 140px;
+    width: 130px;
     height: 60px;
     margin-top: 10px;
 

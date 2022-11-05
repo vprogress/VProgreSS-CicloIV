@@ -8,3 +8,7 @@ const desdeWeb = 28;
 () => {
     console.log("Hola mundo")
 }
+
+(miclave) = {
+    return "miclave"
+}

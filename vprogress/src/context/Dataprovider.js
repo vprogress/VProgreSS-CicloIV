@@ -21,6 +21,23 @@ export const DataProvider = (props) => {
         setProductos(producto)
     }, [])
 
+    const editarProducto = (id) =>
+    {
+        // agregar logica para cargar el formulario de edicion con 
+        // los datos del producto a editar
+        window.location.replace("/editar/"+id);
+        console.log("Editar id: ",id);
+    }
+
+    const eliminarProducto = (id) =>
+    {
+        // agregar logica para eliminar el producto con id
+        if (window.confirm("Desea eliminar el producto de codigo " + id)){
+            console.log("Eliminar id: ",id);
+          }
+        
+    }
+
   // Agregar productos al carrito con cada ID del producto
 
     const addCarrito = (id) => {
@@ -69,7 +86,10 @@ export const DataProvider = (props) => {
         menu: [menu, setMenu],
         addCarrito: addCarrito,
         carrito: [carrito, setCarrito],
-        total: [total, setTotal]
+        total: [total, setTotal],
+        eliminarProducto: eliminarProducto,
+        editarProducto: editarProducto
+
     }
     //si todo es verdad sobre el estado de cada funcion al integrar carrito y producto se importara su contexto.
     return (

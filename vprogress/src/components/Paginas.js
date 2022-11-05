@@ -8,6 +8,7 @@ import { Contactenos } from "./Contactenos/Contactenos";
 import { ResumenVentas } from "./administrador/ResumenVentas";
 import { ResumenProducto } from "./administrador/ResumenProducto";
 import { EditProducto } from "./administrador/EditProducto";
+import { AgregarProducto } from "./administrador/AgregarProducto";
 
 export const Paginas = () => {
   return (
@@ -21,9 +22,10 @@ export const Paginas = () => {
         <Route path="/Somos/" element={<Somos />} />
         <Route path="/Contactenos" element={<Contactenos />} />
         {/* Administrador */}
-        <Route path="/ventas" element={<ResumenVentas />} />
-        <Route path="/listproductos" element={<ResumenProducto />} />
-        <Route path="/editar" element={<EditProducto />} />
+        <Route path="/reports" element={<ResumenVentas />} />
+        <Route path="/products" element={<ResumenProducto />} />
+        <Route path="/editar/:codigo" element={<EditProducto />} />
+        <Route path="/agregar" element={<AgregarProducto/>} />
       </Routes>
     </main>
   );

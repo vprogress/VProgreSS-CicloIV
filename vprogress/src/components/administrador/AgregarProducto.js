@@ -1,8 +1,8 @@
-import React from "react";
 export const AgregarProducto = () => {
   return (
     <>
     <div>
+    <br/><br/><br/><br/>
       <div><h1>Agregar Producto</h1></div>
 
       <div className="form-floating mb-3">

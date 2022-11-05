@@ -1,78 +1,49 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { DataContext } from "../../context/Dataprovider";
 
-import gamora from "../../img/Gamora.jpeg"
-import darth from "../../img/Darth.jpeg"
-import darthMoul from "../../img/DarthMoul.jpg"
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import { ResumenProductoItem } from "./ResumenProductoItem";
 
 export const ResumenProducto = () => {
-    return (
-        <div class="album py-5 bg-light">
-            <div class="container">
+  const value = useContext(DataContext);
+  const [productos] = value.productos;
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                        <img src={gamora} height={150} alt="gamora"/>
-                            <div class="card-body">
-                                <p class="card-text">
-                                Gamora<br/>
-                                GUARDIANES DE LA GALAXIA<br/>
-                                $85</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src={darth} height={150} alt="darth"/>
-
-                            <div class="card-body">
-                            <p class="card-text">
-                                Darth Moul<br/>
-                                STAR WARS<br/>
-                                $85</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src={darthMoul} height={150} alt="darthMoul"/>
-
-
-                            <div class="card-body">
-                            <p class="card-text">
-                                Nike Air Force 1 Low Supreme Black<br/>
-                                NIKE<br/>
-                                $475</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                 
-                </div>
-            </div>
+  return (
+    <>
+      <div>
+        <br /><br /><br /><br />
+        <h1>Listado de Productos</h1>
+      </div>
+      <div class="mt-4">
+        <Link to="/agregar">
+          <button>Agregar Nuevo Producto</button>
+        </Link>
+      </div>
+      <div classNameName="album py-5 bg-light">
+        <div className="container">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {productos.map((producto) => (
+              <ResumenProductoItem
+                key={producto.id}
+                id={producto.id}
+                title={producto.title}
+                price={producto.price}
+                image={producto.image}
+                category={producto.category}
+                cantidad={producto.cantidad}
+              />
+            ))}
+          </div>
         </div>
-    );
+
+      </div>
+      <div class="mt-4">
+        <Link to="/agregar">
+          <button>Agregar Nuevo Producto</button>
+        </Link>
+      </div>
+
+
+    </>
+  );
 };

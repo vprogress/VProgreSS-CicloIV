@@ -1,5 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./Contactenos.css"
 
 export const Contactenos = () => {
   return (

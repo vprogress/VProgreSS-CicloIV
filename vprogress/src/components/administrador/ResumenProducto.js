@@ -3,6 +3,7 @@ import React from "react";
 import gamora from "../../img/Gamora.jpeg"
 import darth from "../../img/Darth.jpeg"
 import darthMoul from "../../img/DarthMoul.jpg"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 export const ResumenProducto = () => {

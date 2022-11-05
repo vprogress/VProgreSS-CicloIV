@@ -3,8 +3,9 @@ import React from "react";
 export const Somos = () => {
   return (
     <>
-      <h1 className="Tittle">Grupo - VPROGRESS</h1>
-      <div className="Productos"></div>
+      <div className="Productos">
+        <h1 className="Tittle">Grupo - VPROGRESS</h1>
+      </div>
       <div>
         <div className="Display container">
           <div className="derecha">

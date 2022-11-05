@@ -1,11 +1,15 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import { Link } from "react-router-dom";
 // Imagen Logo header
 import Funk from "../../img/Funk.png";
 // Boton Carrito
-import  nube  from "../../img/Nube.png";
-//Datos
+import nube from "../../img/Nube.png";
+
+import "./Header.css";
+
+//Data provider
 import { DataContext } from "../../context/Dataprovider";
+
 
 
 
@@ -20,16 +24,14 @@ export const Header = () => {
   const toogleMenu = () => {
     setMenu(!menu)
   }
-
-
-
+//-----------------------------------------------------------------//
 
   return (
     <>
       <header>
         <Link href="https://www.google.com/">
           <div className="logo">
-            <img src={Funk} alt="logo" width="200" />
+            <img src={Funk} alt="logo" width="150" />
           </div>
         </Link>
         <ul>
@@ -55,7 +57,7 @@ export const Header = () => {
           </li>
           <li>
             <div className="cart" onClick={toogleMenu}>
-              <img src={nube} alt=".nube"/>
+              <img src={nube} alt="nube" />
               <span className="item__total">{carrito.length}</span>
             </div>
           </li>

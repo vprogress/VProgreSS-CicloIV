@@ -1,18 +1,18 @@
 import React from 'react'
-import { darth } from "../../img/Darth.jpeg";
 
 export const Inicio = () => {
   return (
     <>
-      <h1 className="Tittle">Funkos</h1>
-      <div className="Productos"></div>
+      <div className="Productos">
+        <h1 className="Tittle">INICIO DE PAGINA</h1>
+      </div>
       <br />
       <div className="row">
         <div className="container">
           <div className="col-lg-12">
             <div
               style={{
-                backgroundColor: "#eee",
+                backgroundColor: "#e076ac",
                 padding: "40px 20px",
                 borderRadius: 25,
                 marginBottom: 30,

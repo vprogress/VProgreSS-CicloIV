@@ -1,8 +1,7 @@
-import React from 'react'
+import React from "react";
 class ItemVenta extends React.Component {
-    render(){
-        return <h1>ItemVenta</h1>;
-
-    }
+  render() {
+    return <h1>ItemVenta</h1>;
+  }
 }
-export default ItemVenta
+export default ItemVenta;

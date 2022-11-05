@@ -24,104 +24,6 @@ code {
   box-sizing: border-box;
 }
 
-/*----------------------Header-----------------------------*/
-
-header{
-  width: 97%;
-  min-height: 200px;
-  overflow: hidden;
-  display: flex;
-  max-width: 1520px;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  position: fixed;
-  box-sizing: border-box;
-  background: url(./img/Luck.gif) no-repeat;
-  background-size: cover;
-  background-position-y:center;
-  box-shadow: 0 5px 10px #080808;
-  border-radius: 5px;
-}
-
-a{
-  color: black;
-  text-decoration:  none;
-  text-transform: uppercase;
-}
-a:hover{
-  color: blueviolet;
-}
-
-li{
-  list-style: none;
-  margin: 0;
-  font-size: 1.2rem;
-
-}
-
-header ul{
-  display: flex;
-  padding: 0;
-  margin: 0%;
-}
-
-header ul li{
-  padding: 0 0.6rem;
-  padding-top: 50px;
-}
-
-header ul li button{
-  display: inline-block;
-    padding: .5rem 1rem;
-    font-size: 1.2rem;
-    background-color: #bfff00;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: 800;
-}
-
-header ul li button:hover{
-  background-color: #80003d;
-  color: white;
-}
-
-header ul li a{
-  font-weight: bold;
-}
-
-header .cart {
-  position: relative;
-  cursor: pointer;
-}
-
-header .cart img{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 140px;
-  height: 60px;
- 
-}
-
-header .cart span{
-  position: absolute;
-  top: 1.4rem;
-  right: 3.6rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  padding: 0.3rem;
-  font-size: 0.9rem;
-  font-weight: 800;
-  background-color: #e92aa2;
-}
 
 /*-----------------INICIO----------------------------------------*/
 
@@ -137,6 +39,7 @@ header .cart span{
 
 .contenido h1 {
   text-align: center;
+  color: #630b57;
 }
 
 .container {
@@ -146,6 +49,10 @@ header .cart span{
   margin-right: auto;
   margin-left: auto;
 
+}
+
+.container img{
+  border-radius: 50px;
 }
 
 .contenido h1 {
@@ -184,6 +91,8 @@ ul a {
   text-transform: uppercase;
 
 }
+
+
 
 .row {
   display: -ms-flexbox;
@@ -230,22 +139,22 @@ ul a {
       color: white;
 }
 
-
 /*-----------------Catalogo--------------------------------------*/
 /*-----------------PRODUCTOS ---------------------------*/
 
 .Tittle{
   font-size: 2,4rem;
-  padding: 16rem 0 0 0;
+  padding: 14rem 0 0 0;
   padding-bottom: 3rem;
   color: #ef8800;
   background-color: #630b57;
   border-radius: 10px;
   text-align: center;
+  
 }
 
 .Productos{
-  padding: 2rem 0;
+  padding: 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
@@ -506,51 +415,47 @@ fill: #ff7e00;
 }
 
 
-/*---------SOMOS-----------------------------------------*/
+/*---------SOMOSSSSSS-----------------------------------------*/
 
-.container{
-  margin: 0 2rem;
-}
-.p2{
-  margin: 10px 0px;
-}
 .presentacion {
   width: 40%;
   display: flex;
   border-radius: 7px;
+  margin-bottom: 8%;
 }
 
-.pr1{
+.pr1 {
   border-top: 6px solid rgb(38, 105, 250);
 }
 
-.pr2{
+.pr2 {
   border-top: 6px solid rgb(38, 250, 243);
 }
 
-.pr3{
+.pr3 {
   border-top: 6px solid rgb(38, 250, 158);
 }
 
-.pr4{
+.pr4 {
   border-top: 6px solid rgb(232, 250, 38);
 }
 
-.pr5{
+.pr5 {
   border-top: 6px solid rgb(250, 38, 38);
 }
 
-.Display{
+.Display {
   display: flex;
   flex-direction: column;
   gap: 10rem;
 }
-.derecha{
+
+.derecha {
   justify-content: left !important;
   display: flex;
 }
 
-.izquierda{
+.izquierda {
   justify-content: right !important;
   display: flex;
 }
@@ -567,8 +472,8 @@ fill: #ff7e00;
 .rol {
   width: 50%;
   border-radius: 7px;
-  background: rgb(246,246,246);
-  background: linear-gradient(rgba(246,246,246,1), rgba(195,195,195,1));
+  background: rgb(246, 246, 246);
+  background: linear-gradient(rgba(246, 246, 246, 1), rgba(195, 195, 195, 1));
 }
 
 .descripcion {
@@ -576,9 +481,9 @@ fill: #ff7e00;
 }
 
 .descripcion h1 {
-    font-size: 20px;
-    padding: 52px 40px 0px 40px;
-    color: #474747;
+  font-size: 20px;
+  padding: 52px 40px 0px 40px;
+  color: #474747;
 }
 
 .descripcion h2 {
@@ -598,7 +503,7 @@ fill: #ff7e00;
   padding: 50px 40px 0px 40px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .presentacion {
     width: 80%;
     display: flex;
@@ -630,7 +535,7 @@ fill: #ff7e00;
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
   .presentacion {
     width: 80%;
     display: flex;
@@ -666,12 +571,13 @@ fill: #ff7e00;
     flex-direction: column;
     gap: 2rem;
   }
-  .derecha{
+
+  .derecha {
     justify-content: center !important;
     display: flex;
   }
-  
-  .izquierda{
+
+  .izquierda {
     justify-content: center !important;
     display: flex;
   }
@@ -680,23 +586,22 @@ fill: #ff7e00;
 /*---------Contactenos-----------------------------------*/
     
 
-             #general_section {
-               display: flex;
-               padding: 0% ;
-               padding-bottom: 5em;
-      
-      
-             }
-      
-             .formulario {
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               flex-grow: 4;
-               flex-basis: 0;
-               padding: 1 1em;
-             }
-      
+    #general_section {
+    display: flex;
+    padding: 0% ;
+    padding-bottom: 5em;
+
+  }
+
+.formulario {
+display: flex;
+flex-direction: column;
+justify-content: center;
+flex-grow: 4;
+ flex-basis: 0;
+ padding: 1 1em;
+}
+
              .nosotros {
                display: flex;
                flex-direction: column;
@@ -877,10 +782,22 @@ footer .information a {
 /*-------------Media----------------------*/
 
 /*-------------INICIO----------------------*/
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 900px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .contenido {
     max-width: 1200px;
   }
+}
+
+@media only screen and (min-width: 1200px){
+ .contenido .container img {
+      max-width: 700px;
+    }
 }
 /*--------pie de paginas----------*/
 @media screen and (max-width: 1100px) {
@@ -898,12 +815,7 @@ footer .information a {
     margin-top: 40px;
   }
 }
-/*------------Inicio--------------*/
-@media only screen and (min-width: 1000px) {
-  .container {
-    max-width: 900px;
-  }
-}
+
 /*-------------Carrito------------*/
 
 @media only screen and (max-width:1000px) {

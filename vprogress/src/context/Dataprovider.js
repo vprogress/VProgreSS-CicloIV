@@ -4,6 +4,7 @@ import  Data   from '../Data.js'
 export const DataContext = createContext();
 
 export const DataProvider = (props) => {
+    // Trabajo
     const [productos, setProductos] = useState([])
     const [menu, setMenu] = useState(false);
     const [carrito, setCarrito] = useState([]);

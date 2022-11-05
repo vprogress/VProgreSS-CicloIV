@@ -3,20 +3,18 @@ import React from "react";
 import gamora from "../../img/Gamora.jpeg"
 import darth from "../../img/Darth.jpeg"
 import darthMoul from "../../img/DarthMoul.jpg"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 export const ResumenProducto = () => {
     return (
-        <>
-        <div><h1>Listado de Productos</h1></div>
         <div class="album py-5 bg-light">
-            
             <div class="container">
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card shadow-sm">
-                        <img src={gamora}  height={150} width={150} alt="gamora"/>
+                        <img src={gamora} height={150} alt="gamora"/>
                             <div class="card-body">
                                 <p class="card-text">
                                 Gamora<br/>
@@ -27,14 +25,14 @@ export const ResumenProducto = () => {
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
                                     </div>
-                                    <small class="text-muted">9 unidades</small>
+                                    <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src={darth}  height={150} width={150} alt="darth"/>
+                            <img src={darth} height={150} alt="darth"/>
 
                             <div class="card-body">
                             <p class="card-text">
@@ -46,14 +44,14 @@ export const ResumenProducto = () => {
                                     <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
                                     </div>
-                                    <small class="text-muted">3 unidades</small>
+                                    <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card shadow-sm" >
-                            <img src={darthMoul} height={150} width={150} alt="darthMoul"/>
+                        <div class="card shadow-sm">
+                            <img src={darthMoul} height={150} alt="darthMoul"/>
 
 
                             <div class="card-body">
@@ -66,7 +64,7 @@ export const ResumenProducto = () => {
                                     <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-trash-can"></i> Eliminar</button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
                                     </div>
-                                    <small class="text-muted">19 unidades</small>
+                                    <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
@@ -76,6 +74,5 @@ export const ResumenProducto = () => {
                 </div>
             </div>
         </div>
-        </>
     );
 };

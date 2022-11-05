@@ -1,0 +1,105 @@
+header {
+    width: 98%;
+    min-height: 5%;
+    overflow: hidden;
+    display: flex;
+    max-width: 1520px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    box-sizing: border-box;
+    background: url(../../img/Luck.gif) no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    box-shadow: 0 5px 10px #080808;
+    border-radius: 5px;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    font-size: 1.2rem;
+
+}
+
+header ul {
+    display: flex;
+    padding: 0;
+    margin: 0%;
+}
+
+header ul li {
+    padding: 0 0.6rem;
+   
+}
+
+header ul li button {
+    display: inline-block;
+    padding: .6rem 2rem;
+    font-size: 1.2rem;
+    background-color: #bfff00;
+    border: 1;
+    border-color: #80003d;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+header ul li button:hover {
+    background-color: #80003d;
+    color: white;
+}
+
+header ul li a {
+    font-weight: bold;
+}
+
+header .cart {
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+header .cart img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 60px;
+    margin-top: 10px;
+
+}
+
+header .cart span {
+    position: absolute;
+    top: 1.4rem;
+    right: 3.6rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    background-color: #e92aa2;
+}
+
+/*------------MEDIA-----------------*/

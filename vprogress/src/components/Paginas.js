@@ -23,7 +23,7 @@ export const Paginas = () => {
         <Route path="/Contactenos" element={<Contactenos />} />
         {/* Administrador */}
         <Route path="/reports" element={<ResumenVentas />} />
-        <Route path="/products" element={<ResumenProducto />} />
+        <Route path="/listproducts" element={<ResumenProducto />} />
         <Route path="/editar/:codigo" element={<EditProducto />} />
         <Route path="/agregar" element={<AgregarProducto/>} />
       </Routes>

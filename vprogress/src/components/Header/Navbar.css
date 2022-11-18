@@ -103,3 +103,13 @@ span {
 }
 
 
+.sidebar-nav .nav-link.collapsed {
+    color: #012970;
+    background: #fff;
+  }
+  
+  .sidebar-nav .nav-link.collapsed i {
+    color: #899bbd;
+  }
+
+  

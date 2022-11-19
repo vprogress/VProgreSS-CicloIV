@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { ApiBack } from "../../app/js/ApiBack";
 import { ServicioPublico } from "../../app/js/ServicioPublico";
 import { DataContext } from "../../context/Dataprovider";
-import { Authenticate } from "../auth/Authenticate";
-
-
+import { Authenticate } from "../../app/js/Authenticate";
+import noFoto from "../images/preview.jpg"
+import { ConvertirBase64 } from "../../app/js/ConvertirBase64";
 
 
 export const EditProducto = () => {
@@ -22,6 +22,11 @@ export const EditProducto = () => {
 //  productos.filter((elemento) => { return (productos.id == )})
 
 //Definicion de variables
+
+const [imagenMiniatura, setImagenMiniatura] = useState(noFoto)
+const [imagen64, setImagen64] = useState(noFoto)
+const navigate = useNavigate();
+
 const [isUpdate, setIsUpdate] = useState("");
 const [isLoading, setIsLoading] = useState(true);
 let {codigo}=useParams();
@@ -46,15 +51,29 @@ const obtenerProducto = async () => {
     dataProduct.productStock= resultado.productStock;
     dataProduct.productValue= resultado.productValue;
     dataProduct.productImage= resultado.productImage;
+    setImagenMiniatura(resultado.productImage);
+    setImagen64(resultado.productImage);
     setIsLoading(false);
   
   }
   
 }
 
+const mostrarImagen = async (event) => {
+  const archivo = event.target.files;
+  const imagen = archivo[0];
+  setImagenMiniatura(URL.createObjectURL(imagen));
+  const imgBase64 = await ConvertirBase64(imagen);
+  console.log(imgBase64);
+
+  setImagen64(String(imgBase64));
+}
+
+
 
 const processForm = async (event) => {
   event.preventDefault();
+  dataProduct.productImage = imagen64;
 
   const url = ApiBack.PRODUCT_EDIT + "/" + dataProduct._id;
   const resultado = await ServicioPublico.sendPOST(url, dataProduct);
@@ -70,7 +89,7 @@ const processForm = async (event) => {
 }
 
 if (!Authenticate()){
-  Navigate("/Login");
+  navigate("/Login");
 }
 
 useEffect(() => {
@@ -159,10 +178,10 @@ if (isLoading)
           <input
             type="file"
             class="form-control"
-            id="productImage"
-            name="productImage"
-            placeholder="productImage"
-            onChange={handleChange}
+            id="productImageStr"
+            name="productImageSrt"
+            placeholder="productImageStr"
+            onChange={mostrarImagen}
             accept="image/*"
           />
           <label for="productImage">Imagen</label>
@@ -179,10 +198,10 @@ if (isLoading)
         <div class="mb-3">
           <div class="d-flex justify-content-center">
             <img
-              id="fotArtYa"
-              src="src/assets/images/noFoto.png"
-              class="maximoInterprete"
+              id="productImage"
+              src={imagenMiniatura}
               alt="No foto"
+              height={150} width={150}
             />
           </div>
         </div>

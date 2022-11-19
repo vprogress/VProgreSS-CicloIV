@@ -12,7 +12,7 @@ export const ProductoItem = ({ id, title, price, image, category }) => {
     <div className="Producto">
       <a href="#">
         <div className="Producto__img">
-          <img src={image} alt={title} />
+          <img src={image} height={100} width={100} />
         </div>
       </a>
       <div className="Producto__footer">

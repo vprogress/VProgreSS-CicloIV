@@ -6,7 +6,7 @@ import { DataContext } from "../../context/Dataprovider";
 import Product from "../../app/modelos/Product";
 import { ServicioPublico } from "../../app/js/ServicioPublico";
 import { ApiBack } from "../../app/js/ApiBack";
-import { Authenticate } from "../auth/Authenticate";
+import { Authenticate } from "../../app/js/Authenticate";
 
 export const ResumenProducto = () => {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ export const ResumenProducto = () => {
     obtenerProductos();
   }
 
- 
+     
   if (!Authenticate()){
     navigate("/Login");
   }
@@ -70,7 +70,7 @@ export const ResumenProducto = () => {
               <div className="col" key={index}>
 
                 <div className="card shadow-sm">
-                  <img src={producto.productImage} height={150} width={150} alt="gamora" />
+                  <img src={producto.productImage} height={100} width={100} alt="gamora" />
                   <div className="card-body">
                     <h1>{producto.productName}</h1>
                     <p className="card-text">{producto.productDescription}</p>

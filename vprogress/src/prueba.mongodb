@@ -1,9 +1,9 @@
 use("test");
 db.Product.insertOne({
-    productName: "Prueba1227",
-    productDescription: "esto es una prueba",
-    productStock: 30,
-    productValue: 23.5,
+    productName: "Prueba0925",
+    productDescription: "esto es una prueba 0925",
+    productStock: 50,
+    productValue: 53.5,
     productImage: " "
 
 })

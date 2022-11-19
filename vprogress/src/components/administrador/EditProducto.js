@@ -29,8 +29,8 @@ const [dataProduct, setDataProduct] = useState({
   _id: "",
   productName: "",
     productDescription:"",
-    productStock: "",
-    productValue: "",
+    productStock: 0,
+    productValue: 0.0,
     productImage: "",
 });
 

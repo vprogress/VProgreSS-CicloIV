@@ -26,6 +26,12 @@ export const ResumenProducto = () => {
     return resultado;
   }
 
+  const deleteProducto = async (idProducto) => {
+    const url = ApiBack.PRODUCT_REMOVE + "/" + idProducto;
+    const resultado = await ServicioPublico.sendDELETE(url);
+    obtenerProductos();
+  }
+
  
   if (!Authenticate()){
     navigate("/Login");
@@ -74,7 +80,11 @@ export const ResumenProducto = () => {
                         <button
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
-                          onClick={() => eliminarProducto(producto._id)}
+                          onClick={() => {
+                          if (window.confirm("Esta seguro de que desea eliminar el producto " + producto.productName + " ?")) {
+                            deleteProducto(producto._id)
+                          } }
+                          }
                         >
                           <i className="fa-regular fa-trash-can"></i> Eliminar
                         </button>

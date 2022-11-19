@@ -6,12 +6,12 @@ export class ServicioPublico {
 
     static async sendGET(urlRequest)
     {
-        const datosEnviar = {
+        const datosConsultaBackend = {
             method: "GET",
             headers: {"Content-Type": "application/json; charset=UTF-8"} 
         };
         const url = ApiBack.URL + urlRequest;
-        const respuesta = fetch(url, datosEnviar)
+        const respuesta = fetch(url, datosConsultaBackend)
         .then((respuesta) => respuesta.json())
         .then( (datos) => { return datos; })
         .catch( (miError) => { return miError; });
@@ -20,12 +20,12 @@ export class ServicioPublico {
 
     static async sendDELETE(urlRequest)
     {
-        const datosEnviar = {
+        const datosConsultaBackend = {
             method: "DELETE",
             headers: {"Content-Type": "application/json; charset=UTF-8"} 
         };
         const url = ApiBack.URL + urlRequest;
-        const respuesta = fetch(url, datosEnviar)
+        const respuesta = fetch(url, datosConsultaBackend)
         .then((respuesta) => respuesta.json())
         .then( (datos) => { return datos; })
         .catch( (miError) => { return miError; });
@@ -34,13 +34,16 @@ export class ServicioPublico {
 
     static async sendPOST(urlRequest, misDatos)
     {
-        const datosEnviar = {
+        const datosConsultaBackend = {
             method: "POST",
             body: JSON.stringify(misDatos),
             headers: {"Content-Type": "application/json; charset=UTF-8"} 
         };
         const url = ApiBack.URL + urlRequest;
-        const respuesta = fetch(url, datosEnviar)
+        console.log(url);
+        console.log(misDatos);
+
+        const respuesta = fetch(url, datosConsultaBackend)
         .then((respuesta) => respuesta.json())
         .then( (datos) => { return datos; })
         .catch( (miError) => { return miError; });
@@ -49,13 +52,13 @@ export class ServicioPublico {
 
     static async sendPUT(urlRequest, misDatos)
     {
-        const datosEnviar = {
+        const datosConsultaBackend = {
             method: "PUT",
             body: JSON.stringify(misDatos),
             headers: {"Content-Type": "application/json; charset=UTF-8"} 
         };
         const url = ApiBack.URL + urlRequest;
-        const respuesta = fetch(url, datosEnviar)
+        const respuesta = fetch(url, datosConsultaBackend)
         .then((respuesta) => respuesta.json())
         .then( (datos) => { return datos; })
         .catch( (miError) => { return miError; });

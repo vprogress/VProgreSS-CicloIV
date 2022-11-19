@@ -13,6 +13,7 @@ export const ProductosLista = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [arrayProducts, setArrayProducts] = useState([]);
 
+  //Metodo para obtener los productos desde el backend
   const obtenerProductos = async () => {
     const resultado = await ServicioPublico.sendGET(ApiBack.PRODUCT_LIST_ALL);
     setArrayProducts(resultado);

@@ -10,4 +10,7 @@ export const ApiBack = {
      PRODUCT_EDIT: "/api/product/updateproduct",
      USER_LOGIN: "/api/public/users/login",
      VENTAS_LIST_ALL: "/api/ventas/listaventas",
+     PRODUCT_ONE_PRODUCT: "/api/product/oneproduct",
+     USER_EDIT: "/api/users/updateuser"
+     
 };

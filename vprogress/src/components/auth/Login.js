@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 export const Login = () => {
 
     const navigate = useNavigate();
+    const [isLogged, setIsLogged] = useState("");
 
     const [dataLogin, setDataLogin] = useState({
         userMail: "",
@@ -38,6 +39,11 @@ export const Login = () => {
                 localStorage.setItem("tokenVProgress", resultado.tokenVProgress);
                 navigate("/Productos");
             }
+            else{
+                setIsLogged("Error en la autenticación");
+            }
+        } else{
+            setIsLogged("Error en la autenticación");
         }
 
 
@@ -58,8 +64,8 @@ export const Login = () => {
                     <input type="password" className="form-control" id="userPass" name="userPass" onChange={handleChange}/>
                 </div>
                 <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                    
+                    <label className="form-check-label" for="isLogged" value={isLogged}>{isLogged}</label>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>

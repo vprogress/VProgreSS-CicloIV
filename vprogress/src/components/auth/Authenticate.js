@@ -3,7 +3,7 @@ import React from "react";
 
 export const Authenticate = () => {
     const token = localStorage.getItem("tokenVProgress");
-    console.log("Token: ", token);
+    //console.log("Token: ", token);
     if (token)
     {
         const tokenPrc = jwtDecode(token);

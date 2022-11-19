@@ -42,7 +42,10 @@ export class ServicioPrivado {
             body: JSON.stringify(misDatos),
             headers: {"Content-Type": "application/json; charset=UTF-8", authorization: token} 
         };
-        const url = ApiBack.URL + urlRequest;
+        const url = ApiBack.URL + urlRequest ;
+        console.log(url);
+        console.log(misDatos);
+
         const respuesta = fetch(url, datosEnviar)
         .then((respuesta) => respuesta.json())
         .then( (datos) => { return datos; })

@@ -1,18 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DataContext } from "../../context/Dataprovider";
 
 // import { ResumenProductoItem } from "./ResumenProductoItem";
 import Product from "../../app/modelos/Product";
 import { ServicioPublico } from "../../app/js/ServicioPublico";
 import { ApiBack } from "../../app/js/ApiBack";
+import { Authenticate } from "../auth/Authenticate";
 
 export const ResumenProducto = () => {
-  //const value = useContext(DataContext);
+  const navigate = useNavigate();
+  const value = useContext(DataContext);
   const eliminarProducto = value.eliminarProducto;
   const editarProducto = value.editarProducto;
 
   // const [productos] = value.productos;
+  //useState es un hook propio de react que autogestiona la variable
   const [isLoading, setIsLoading] = useState(true);
   const [arrayProducts, setArrayProducts] = useState([]);
 
@@ -21,6 +24,11 @@ export const ResumenProducto = () => {
     setArrayProducts(resultado);
     console.log("arrayProducts: ", arrayProducts);
     return resultado;
+  }
+
+ 
+  if (!Authenticate()){
+    navigate("/Login");
   }
 
   useEffect(() => {

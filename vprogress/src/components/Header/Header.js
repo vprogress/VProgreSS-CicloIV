@@ -56,6 +56,11 @@ export const Header = () => {
             </Link>
           </li>
           <li>
+            <Link to="/login">
+              <button>Login</button>
+            </Link>
+          </li>
+          <li>
             <div className="cart" onClick={toogleMenu}>
               <img src={nube} alt="nube" />
               <span className="item__total">{carrito.length}</span>

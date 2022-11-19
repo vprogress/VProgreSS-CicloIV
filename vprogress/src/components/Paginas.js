@@ -9,16 +9,20 @@ import { ResumenVentas } from "./administrador/ResumenVentas";
 import { ResumenProducto } from "./administrador/ResumenProducto";
 import { EditProducto } from "./administrador/EditProducto";
 import { AgregarProducto } from "./administrador/AgregarProducto";
+import { Login } from "./auth/Login";
 
 export const Paginas = () => {
   return (
     <main>
       {/* Rutas para paginacion y division de categorias (Routes)*/}
       <Routes>
+
+        {/* Inicio de sesion */}
+        <Route path="/login" element={<Login/>} />
         {/* Inicio o home de la pagina */}
         <Route path="/" element={<Inicio />} />
         {/* Catalogo o Productos de la pagiina */}
-        <Route path="/Productos/" element={<ProductosLista />} />
+        <Route path="/Productos" element={<ProductosLista />} />
         <Route path="/Somos/" element={<Somos />} />
         <Route path="/Contactenos" element={<Contactenos />} />
         {/* Administrador */}
